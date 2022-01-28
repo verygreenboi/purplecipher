@@ -13,8 +13,49 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:ui"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:data",
+                  "type:types",
+                  "type:state",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:shared",
+                "onlyDependOnLibsWithTags": [
+                  "type:shared",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:types",
+                "onlyDependOnLibsWithTags": ["type:types"]
+              },
+              {
+                "sourceTag": "type:state",
+                "onlyDependOnLibsWithTags": [
+                  "type:state",
+                  "type:types",
+                  "type:data"
+                ]
+              },
+              {
+                "sourceTag": "type:data",
+                "onlyDependOnLibsWithTags": ["type:types"]
+              },
+              {
+                "sourceTag": "type:e2e",
+                "onlyDependOnLibsWithTags": ["type:e2e-utils"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:types", "type:ui"]
               }
             ]
           }

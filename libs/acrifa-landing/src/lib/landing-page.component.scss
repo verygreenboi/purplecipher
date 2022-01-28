@@ -1,0 +1,47 @@
+:host {
+  display: block;
+  & > section {
+    position: relative;
+  }
+
+  section#hero {
+    min-height: calc(100vh - 64px);
+  }
+}
+
+.custom-shape-divider-bottom-1631748616 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1631748616 svg {
+  position: relative;
+  display: block;
+  width: calc(175% + 1.3px);
+  height: 49px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1631748616 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.book-card {
+  width: 100%;
+
+  .book-button {
+    background: #391707;
+    border-radius: 0 1.5rem;
+    min-width: 297px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .detail {
+    width: calc(66% + 2rem);
+  }
+}

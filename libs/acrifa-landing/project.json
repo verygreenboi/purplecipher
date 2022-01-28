@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/acrifa-landing",
+  "sourceRoot": "libs/acrifa-landing/src",
+  "prefix": "purplecipher",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/acrifa-landing"],
+      "options": {
+        "project": "libs/acrifa-landing/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/acrifa-landing/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/acrifa-landing/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/acrifa-landing"],
+      "options": {
+        "jestConfig": "libs/acrifa-landing/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/acrifa-landing/src/**/*.ts",
+          "libs/acrifa-landing/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature"]
+}

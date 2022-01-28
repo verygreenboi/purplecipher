@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/layout/navbar",
+  "sourceRoot": "libs/layout/navbar/src",
+  "prefix": "purplecipher",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/layout/navbar"],
+      "options": {
+        "project": "libs/layout/navbar/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/layout/navbar/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/layout/navbar/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/layout/navbar"],
+      "options": {
+        "jestConfig": "libs/layout/navbar/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/layout/navbar/src/**/*.ts",
+          "libs/layout/navbar/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:shared"]
+}

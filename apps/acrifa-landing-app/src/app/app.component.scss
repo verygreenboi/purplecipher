@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+main {
+  min-height: 100vh;
+  overflow-y: scroll;
+  &.with-nav {
+    min-height: calc(100vh - 64px);
+  }
+}

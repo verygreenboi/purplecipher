@@ -14,7 +14,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@purplecipher/acrifa-auth": ["libs/acrifa-auth/src/index.ts"],
+      "@purplecipher/acrifa-landing": ["libs/acrifa-landing/src/index.ts"],
+      "@purplecipher/layout-helpers": ["libs/layout-helpers/src/index.ts"],
+      "@purplecipher/layout/navbar": ["libs/layout/navbar/src/index.ts"],
+      "@purplecipher/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@purplecipher/shared/base-class": [
+        "libs/shared/base-class/src/index.ts"
+      ],
+      "@purplecipher/shared/model": ["libs/shared/model/src/index.ts"],
+      "@purplecipher/util": ["libs/util/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

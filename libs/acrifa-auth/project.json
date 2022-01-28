@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/acrifa-auth",
+  "sourceRoot": "libs/acrifa-auth/src",
+  "prefix": "purplecipher",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/acrifa-auth"],
+      "options": {
+        "project": "libs/acrifa-auth/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/acrifa-auth/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/acrifa-auth/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/acrifa-auth"],
+      "options": {
+        "jestConfig": "libs/acrifa-auth/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/acrifa-auth/src/**/*.ts",
+          "libs/acrifa-auth/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:feature"]
+}

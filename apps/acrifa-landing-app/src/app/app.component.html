@@ -1,0 +1,4 @@
+<purplecipher-navbar *ngIf='showNav | async'></purplecipher-navbar>
+<main [ngClass]='{"with-nav": showNav | async}'>
+  <router-outlet></router-outlet>
+</main>

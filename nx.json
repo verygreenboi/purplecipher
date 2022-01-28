@@ -1,7 +1,7 @@
 {
   "npmScope": "purplecipher",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -27,5 +27,19 @@
       }
     ]
   },
-  "projects": {}
+  "projects": {
+    "acrifa-landing-app": {
+      "tags": ["type:app"]
+    },
+    "acrifa-landing-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["acrifa-landing-app"]
+    },
+    "layout-helpers": {
+      "tags": ["scope:shared"]
+    },
+    "util": {
+      "tags": ["type:util"]
+    }
+  }
 }

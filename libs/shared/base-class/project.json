@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/base-class",
+  "sourceRoot": "libs/shared/base-class/src",
+  "prefix": "purplecipher",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/base-class"],
+      "options": {
+        "jestConfig": "libs/shared/base-class/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/base-class/src/**/*.ts",
+          "libs/shared/base-class/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:shared"]
+}
